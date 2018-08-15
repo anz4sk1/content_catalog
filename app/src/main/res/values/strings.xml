@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Catalog</string>
+
+    <string name="Idei">Идеи</string>
+    <string name="idedi1000">Тысячи идей для вас</string>
+
+    <string name="stati">Статьи</string>
+    <string name="interesnoe">Интересное рядом</string>
+</resources>
