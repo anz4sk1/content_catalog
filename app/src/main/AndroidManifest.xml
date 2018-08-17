@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity"
+            android:theme="@style/NoBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -24,18 +26,17 @@
         <activity android:name=".MainMenuActivity" />
         <activity
             android:name=".IdeiActivity"
-            android:parentActivityName=".MainMenuActivity"
-            tools:ignore="UnusedAttribute" />
-        <activity
-            android:name=".StatiActivity"
+            android:theme="@style/NoBar"
             android:parentActivityName=".MainMenuActivity"
             tools:ignore="UnusedAttribute" />
         <activity
             android:name=".FavoriteActivity"
+            android:theme="@style/NoBar"
             android:parentActivityName=".MainMenuActivity"
             tools:ignore="UnusedAttribute" />
         <activity
-            android:name=".InstructionsActivity"
+            android:name=".OurAppsActivity"
+            android:theme="@style/NoBar"
             android:parentActivityName=".MainMenuActivity"
             tools:ignore="UnusedAttribute" />
         <activity android:name=".OfferActivity"
