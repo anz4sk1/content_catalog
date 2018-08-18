@@ -26,7 +26,6 @@ public class OurAppsActivity extends AppCompatActivity {
         try {
             JSONObject obj = new JSONObject(answer);
             String apps = obj.getString("apps");
-            Log.e("offemainmenu", apps);
             for (int x = 1; x < 3; x++) {
                 String ID = "id" + x;
                 JSONObject offersObj = new JSONObject(apps);
@@ -86,8 +85,6 @@ public class OurAppsActivity extends AppCompatActivity {
 
     }
     public void nextPage(View v){
-//        final Animation animAlpha = AnimationUtils.loadAnimation(this, R.anim.alpha);
-//        v.startAnimation(animAlpha);
         String ID = v.getContentDescription().toString();
         int i = Integer.parseInt(ID);
         Intent infoIntent = new Intent(OurAppsActivity.this, OfferActivity.class);

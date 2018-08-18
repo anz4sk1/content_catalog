@@ -6,7 +6,7 @@ import android.util.Log;
 import com.yandex.metrica.YandexMetrica;
 import com.yandex.metrica.YandexMetricaConfig;
 
-public class MyApp extends Application {
+public class AppMetrika extends Application {
 String metrika;
     @Override
     public void onCreate() {

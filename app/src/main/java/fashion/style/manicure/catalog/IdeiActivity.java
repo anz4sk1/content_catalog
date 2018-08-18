@@ -41,7 +41,7 @@ Context context = this;
             Log.e("My App", "Could not parse malformed JSON: \"" + answer + "\"");
         }
 
-        for(int i = 1; i<7;i++){
+        for(int i = 1; i<11;i++){
             String ID = "imageView" + i;
             int resID = getResources().getIdentifier(ID, "id", getPackageName());
             ImageView IV = (ImageView) findViewById(resID);
@@ -59,5 +59,8 @@ Context context = this;
         infoIntent.putExtra("name", array[i][2]);
 
         startActivity(infoIntent);
+    }
+    public void onClick(View view) {
+        finish();
     }
 }

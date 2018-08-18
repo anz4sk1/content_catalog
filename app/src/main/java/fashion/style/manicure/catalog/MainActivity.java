@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class MainMenuActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
 
 
@@ -25,14 +25,11 @@ public class MainMenuActivity extends AppCompatActivity {
         new GetTask().execute();
 
         Context context = this;
-
-//        Log.e("array1", array[1][0]);
-//        Log.e("array2", array2[1][1]);
         View view1 = (View) findViewById(R.id.view1);
         view1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainMenuActivity.this, IdeiActivity.class);
+                Intent intent = new Intent(MainActivity.this, IdeiActivity.class);
                 intent.putExtra("answer", answer);
                 startActivity(intent);
             }
@@ -42,7 +39,7 @@ public class MainMenuActivity extends AppCompatActivity {
         view2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainMenuActivity.this, FavoriteActivity.class);
+                Intent intent = new Intent(MainActivity.this, FavoriteActivity.class);
                 startActivity(intent);
             }
         });
@@ -51,7 +48,7 @@ public class MainMenuActivity extends AppCompatActivity {
         view3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainMenuActivity.this, OurAppsActivity.class);
+                Intent intent = new Intent(MainActivity.this, OurAppsActivity.class);
                 intent.putExtra("answer", answer);
                 startActivity(intent);
             }
@@ -61,7 +58,7 @@ public class MainMenuActivity extends AppCompatActivity {
         view4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainMenuActivity.this, AboutActivity.class);
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intent);
             }
         });
