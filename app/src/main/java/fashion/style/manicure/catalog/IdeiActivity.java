@@ -40,7 +40,7 @@ Context context = this;
             Log.e("My App", "Could not parse malformed JSON: \"" + answer + "\"");
         }
 
-        for(int i = 1; i<7;i++){
+        for(int i = 1; i<11;i++){
 
             String ID = "imageView" + i;
             int resID = getResources().getIdentifier(ID, "id", getPackageName());
@@ -48,31 +48,6 @@ Context context = this;
             Picasso.with(context).load(array[i][1]).into(IV);
 
         }
-
-        /*
-        ImageView offer1 = (ImageView) findViewById(R.id.imageView1);
-        Picasso.with(context).load(array[1][1]).into(offer1);
-
-        ImageView offer2 = (ImageView) findViewById(R.id.imageView2);
-        Picasso.with(context).load(array[2][1]).into(offer2);
-
-        ImageView offer3 = (ImageView) findViewById(R.id.imageView3);
-        Picasso.with(context).load(array[3][1]).into(offer3);
-
-        ImageView offer4 = (ImageView) findViewById(R.id.imageView4);
-        Picasso.with(context).load(array[4][1]).into(offer4);
-
-        ImageView offer5 = (ImageView) findViewById(R.id.imageView5);
-        Picasso.with(context).load(array[4][1]).into(offer5);
-
-        ImageView offer6 = (ImageView) findViewById(R.id.imageView6);
-        Picasso.with(context).load(array[4][1]).into(offer6);
-        */
-
-
-
-
-
 
     }
 
@@ -88,5 +63,8 @@ Context context = this;
         infoIntent.putExtra("name", array[i][2]);
 
         startActivity(infoIntent);
+    }
+    public void onClick(View view) {
+        finish();
     }
 }

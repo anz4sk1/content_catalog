@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">Catalog</string>
+    <string name="app_name">Идеи маникюра</string>
 
     <string name="json">https://manucure-3e06f.firebaseio.com/manicure.json</string>
     <string name="neednetwork">Требуется подключение к Интернету</string>
+
+    <string name="yandexmetrika">3295f0cd-eb23-4e81-aaa4-b424fec010af</string>
 
     <string name="Idei">Идеи</string>
     <string name="idedi1000">Тысячи идей для вас</string>
@@ -19,7 +21,8 @@
     <string name="aboutapp">О приложении</string>
     <string name="moreaboutapp">Подробнее</string>
 
-
+    <string name="vrazrabe">Раздел находится в разработке</string>
+    <string name="aboutapptext">описание ааааааааааааааа аа  ааааааааа  аааааааааааа описание ааааааааааааааа аа  ааааааааа  аааааааааааа описание ааааааааааааааа аа  ааааааааа  аааааааааааа</string>
 
 
     <string name="offer1title">Offer 1 Title</string>
@@ -30,4 +33,17 @@
 
     <string name="offer3title">Offer 3 Title</string>
     <string name="offer3text">Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. </string>
+
+    <string name="contentdesc1">1</string>
+    <string name="contentdesc2">2</string>
+    <string name="contentdesc3">3</string>
+    <string name="contentdesc4">4</string>
+    <string name="contentdesc5">5</string>
+    <string name="contentdesc6">6</string>
+    <string name="contentdesc7">7</string>
+    <string name="contentdesc8">8</string>
+    <string name="contentdesc9">9</string>
+    <string name="contentdesc10">10</string>
+
+
 </resources>

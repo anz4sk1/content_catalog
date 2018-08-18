@@ -57,6 +57,15 @@ public class MainMenuActivity extends AppCompatActivity {
             }
         });
 
+        View view4 = (View) findViewById(R.id.view4);
+        view4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenuActivity.this, AboutActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private class GetTask extends AsyncTask<Void, Void, Void> {
@@ -98,5 +107,7 @@ public class MainMenuActivity extends AppCompatActivity {
     protected void onRestoreInstanceState (Bundle savedInstanceState){
         super.onRestoreInstanceState(savedInstanceState);
     }
+
+
 }
 
