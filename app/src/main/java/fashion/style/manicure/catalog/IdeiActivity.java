@@ -40,6 +40,16 @@ Context context = this;
             Log.e("My App", "Could not parse malformed JSON: \"" + answer + "\"");
         }
 
+        for(int i = 1; i<7;i++){
+
+            String ID = "imageView" + i;
+            int resID = getResources().getIdentifier(ID, "id", getPackageName());
+            ImageView IV = (ImageView) findViewById(resID);
+            Picasso.with(context).load(array[i][1]).into(IV);
+
+        }
+
+        /*
         ImageView offer1 = (ImageView) findViewById(R.id.imageView1);
         Picasso.with(context).load(array[1][1]).into(offer1);
 
@@ -57,7 +67,7 @@ Context context = this;
 
         ImageView offer6 = (ImageView) findViewById(R.id.imageView6);
         Picasso.with(context).load(array[4][1]).into(offer6);
-
+        */
 
 
 
