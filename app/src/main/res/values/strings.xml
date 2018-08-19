@@ -3,7 +3,7 @@
 
     <string name="json">https://manucure-3e06f.firebaseio.com/manicure.json</string>
     <string name="neednetwork">Требуется подключение к Интернету</string>
-
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="yandexmetrika">3295f0cd-eb23-4e81-aaa4-b424fec010af</string>
 
     <string name="Idei">Идеи</string>

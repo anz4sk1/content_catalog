@@ -7,6 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.startapp.android.publish.adsCommon.StartAppAd;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -15,13 +19,18 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity {
 
 
+    private static final String TAG = "MainActivity";
 
+    private AdView mAdView;
     String answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_main);
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         new GetTask().execute();
 
         Context context = this;
@@ -29,9 +38,12 @@ public class MainActivity extends AppCompatActivity {
         view1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, IdeiActivity.class);
+
+                Intent intent = new Intent(MainActivity.this, IdeasActivity.class);
                 intent.putExtra("answer", answer);
                 startActivity(intent);
+
+
             }
         });
 
@@ -105,6 +117,16 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
     }
 
+    @Override
+    public void onBackPressed() {
+        StartAppAd.onBackPressed(this);
+        super.onBackPressed();
+    }
 
+    @Override
+    protected void onResume() {
+        mAdView.resume();
+        super.onResume();
+    }
 }
 

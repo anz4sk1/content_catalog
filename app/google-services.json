@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "774336561361",
+    "firebase_url": "https://catalog-982bd.firebaseio.com",
+    "project_id": "catalog-982bd",
+    "storage_bucket": "catalog-982bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774336561361:android:fa64fc27e21ab05d",
+        "android_client_info": {
+          "package_name": "fashion.style.manicure.catalog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774336561361-3avgsau7es27p42p7aorm5i3v7qub7u9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fashion.style.manicure.catalog",
+            "certificate_hash": "a5e549358d0a3158d9c110bed1b55d8eb7e08b60"
+          }
+        },
+        {
+          "client_id": "774336561361-5fvumc32e0levha9nm1dq41p2bp4qb0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcUZCVluXsIEcKrBKYfxaUvT43Da_PMvU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774336561361-5fvumc32e0levha9nm1dq41p2bp4qb0a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

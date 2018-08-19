@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.MobileAds;
+import com.startapp.android.publish.adsCommon.StartAppSDK;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -16,6 +19,8 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        MobileAds.initialize(this, "YOUR_ADMOB_APP_ID");
+        StartAppSDK.init(this, "207550666", true);
         cd = new ConnectionDetector(this);
         if (cd.isConnected()) {
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);

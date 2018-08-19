@@ -9,17 +9,18 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
+import com.startapp.android.publish.adsCommon.StartAppAd;
 
 import org.json.JSONObject;
 
-public class IdeiActivity extends AppCompatActivity {
+public class IdeasActivity extends AppCompatActivity {
 Context context = this;
     String[][] array = new String[50][3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_idei);
+        setContentView(R.layout.activity_ideas);
         this.setTitle(R.string.Idei);
 
         final String answer = getIntent().getExtras().getString("answer");
@@ -53,14 +54,17 @@ Context context = this;
     public void nextPage(View v){
         String ID = v.getContentDescription().toString();
         int i = Integer.parseInt(ID);
-        Intent infoIntent = new Intent(IdeiActivity.this, OfferActivity.class);
+        Intent infoIntent = new Intent(IdeasActivity.this, OfferActivity.class);
         infoIntent.putExtra("desc", array[i][0]);
         infoIntent.putExtra("pict", array[i][1]);
         infoIntent.putExtra("name", array[i][2]);
 
         startActivity(infoIntent);
+        StartAppAd.showAd(this);
     }
     public void onClick(View view) {
         finish();
     }
+
+
 }
