@@ -61,7 +61,7 @@
             android:theme="@style/NoBar"
             tools:ignore="UnusedAttribute" />
         <activity
-            android:name=".FavoriteActivity"
+            android:name=".FavoritesActivity"
             android:parentActivityName=".MainActivity"
             android:theme="@style/NoBar"
             tools:ignore="UnusedAttribute" />

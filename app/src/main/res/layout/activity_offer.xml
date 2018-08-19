@@ -73,7 +73,7 @@
                     tools:layout_editor_absoluteY="373dp" />
 
                 <TextView
-                    android:id="@+id/textDescOffera"
+                    android:id="@+id/textDescOffer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"

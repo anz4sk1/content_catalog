@@ -6,23 +6,23 @@
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="yandexmetrika">3295f0cd-eb23-4e81-aaa4-b424fec010af</string>
 
-    <string name="Idei">Идеи</string>
-    <string name="idedi1000">Тысячи идей для вас</string>
+    <string name="Ideas">Идеи</string>
+    <string name="ideastext">Тысячи идей для вас</string>
 
-    <string name="stati">Статьи</string>
-    <string name="interesnoe">Интересное рядом</string>
+    <string name="articles">Статьи</string>
+    <string name="articlestext">Интересное рядом</string>
 
-    <string name="faorite">Избранное</string>
-    <string name="favoritetext">Добавьте, что понравится</string>
+    <string name="favorites">Избранное</string>
+    <string name="favoritestext">Добавьте, что понравится</string>
 
     <string name="ourapps">Наши приложения</string>
-    <string name="youlikeit">Найтиде что-то новое для себя</string>
+    <string name="ourappstext">Найтиде что-то новое для себя</string>
 
     <string name="aboutapp">О приложении</string>
     <string name="moreaboutapp">Подробнее</string>
 
-    <string name="vrazrabe">Раздел находится в разработке</string>
-    <string name="aboutapptext">описание ааааааааааааааа аа  ааааааааа  аааааааааааа описание ааааааааааааааа аа  ааааааааа  аааааааааааа описание ааааааааааааааа аа  ааааааааа  аааааааааааа</string>
+    <string name="indevelopiment">Раздел находится в разработке</string>
+    <string name="indevelopimenttext">описание ааааааааааааааа аа  ааааааааа  аааааааааааа описание ааааааааааааааа аа  ааааааааа  аааааааааааа описание ааааааааааааааа аа  ааааааааа  аааааааааааа</string>
 
 
     <string name="offer1title">Offer 1 Title</string>

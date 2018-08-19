@@ -21,7 +21,7 @@ Context context = this;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ideas);
-        this.setTitle(R.string.Idei);
+        this.setTitle(R.string.Ideas);
 
         final String answer = getIntent().getExtras().getString("answer");
         try {

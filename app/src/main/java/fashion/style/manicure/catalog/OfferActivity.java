@@ -27,7 +27,7 @@ public class OfferActivity extends AppCompatActivity {
         TextView offerTitleText = (TextView) findViewById(R.id.offerTitle);
         offerTitleText.setText(getIntent().getExtras().getString("name"));
 
-        TextView offerDescText = (TextView) findViewById(R.id.textDescOffera);
+        TextView offerDescText = (TextView) findViewById(R.id.textDescOffer);
         offerDescText.setText(getIntent().getExtras().getString("desc"));
 
     }
