@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        MobileAds.initialize(this, "YOUR_ADMOB_APP_ID");
+
         StartAppSDK.init(this, "207550666", true);
         cd = new ConnectionDetector(this);
         if (cd.isConnected()) {

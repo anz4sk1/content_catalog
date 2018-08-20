@@ -10,18 +10,30 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.squareup.picasso.Picasso;
+import com.startapp.android.publish.adsCommon.StartAppAd;
 
 import org.json.JSONObject;
 
 public class OurAppsActivity extends AppCompatActivity {
     Context context = this;
     String[][] array2 = new String[3][5];
+    private InterstitialAd mInterstitialAd;
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ourapps);
 
+//        mInterstitialAd = new InterstitialAd(this);
+//        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+//        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+//        mAdView = findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
         final String answer = getIntent().getExtras().getString("answer");
         try {
             JSONObject obj = new JSONObject(answer);
@@ -96,6 +108,29 @@ public class OurAppsActivity extends AppCompatActivity {
         startActivity(infoIntent);
     }
     public void onClick(View view) {
+//        if (mInterstitialAd.isLoaded()) {
+//            mInterstitialAd.show();
+//        } else {
+//            Log.d("TAG", "The interstitial wasn't loaded yet.");
+//        }
+        StartAppAd.showAd(this);
         finish();
+    }
+    @Override
+    public void onBackPressed() {
+//        if (mInterstitialAd.isLoaded()) {
+//            mInterstitialAd.show();
+//        } else {
+//            Log.d("TAG", "The interstitial wasn't loaded yet.");
+//        }
+        StartAppAd.onBackPressed(this);
+        super.onBackPressed();
+        finish();
+    }
+    @Override
+    protected void onResume() {
+//        mAdView.resume();
+
+        super.onResume();
     }
 }

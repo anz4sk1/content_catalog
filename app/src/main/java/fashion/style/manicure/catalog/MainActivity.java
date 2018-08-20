@@ -5,10 +5,14 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 import com.startapp.android.publish.adsCommon.StartAppAd;
 
 import java.io.BufferedReader;
@@ -18,32 +22,31 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private static final String TAG = "MainActivity";
-
     private AdView mAdView;
     String answer;
-
+    private InterstitialAd mInterstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+//        String adMobApp = getString(R.string.banner_ad_app);
+//        MobileAds.initialize(this, adMobApp);
+//        mInterstitialAd = new InterstitialAd(this);
+//        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+//        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+//        mAdView = findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
+
         new GetTask().execute();
 
-        Context context = this;
         View view1 = (View) findViewById(R.id.view1);
         view1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(MainActivity.this, IdeasActivity.class);
                 intent.putExtra("answer", answer);
                 startActivity(intent);
-
-
             }
         });
 
@@ -74,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
     }
 
     private class GetTask extends AsyncTask<Void, Void, Void> {
@@ -119,13 +121,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+//        if (mInterstitialAd.isLoaded()) {
+//            mInterstitialAd.show();
+//        } else {
+//            Log.d("TAG", "The interstitial wasn't loaded yet.");
+//        }
         StartAppAd.onBackPressed(this);
         super.onBackPressed();
+        finish();
     }
 
     @Override
     protected void onResume() {
-        mAdView.resume();
+
+//        mAdView.resume();
         super.onResume();
     }
 }
