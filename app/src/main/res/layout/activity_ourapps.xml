@@ -175,29 +175,29 @@
         </LinearLayout>
     </ScrollView>
 
-    <!--<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"-->
-        <!--android:id="@+id/adView"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--ads:adSize="BANNER"-->
-        <!--ads:adUnitId="@string/banner_ad_test"-->
-        <!--ads:layout_constraintBottom_toBottomOf="@+id/scrollView4"-->
-        <!--ads:layout_constraintEnd_toStartOf="@+id/scrollView4"-->
-        <!--ads:layout_constraintHorizontal_bias="0.5"-->
-        <!--ads:layout_constraintStart_toEndOf="@+id/scrollView4">-->
-
-    <!--</com.google.android.gms.ads.AdView>-->
-    <com.startapp.android.publish.ads.banner.Banner
-        android:id="@+id/startAppBanner"
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginBottom="0dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_bottom"
+        ads:layout_constraintBottom_toBottomOf="@+id/scrollView4"
+        ads:layout_constraintEnd_toStartOf="@+id/scrollView4"
+        ads:layout_constraintHorizontal_bias="0.5"
+        ads:layout_constraintStart_toEndOf="@+id/scrollView4">
+
+    </com.google.android.gms.ads.AdView>
+    <!--<com.startapp.android.publish.ads.banner.Banner-->
+        <!--android:id="@+id/startAppBanner"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toStartOf="parent" />-->
 </android.support.constraint.ConstraintLayout>

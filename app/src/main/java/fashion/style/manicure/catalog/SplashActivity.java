@@ -20,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        StartAppSDK.init(this, "207550666", true);
+//        StartAppSDK.init(this, "207550666", true);
         cd = new ConnectionDetector(this);
         if (cd.isConnected()) {
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);

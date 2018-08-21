@@ -10,9 +10,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.formats.NativeAdOptions;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.squareup.picasso.Picasso;
 import com.startapp.android.publish.adsCommon.StartAppAd;
 
@@ -28,12 +32,42 @@ public class OurAppsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ourapps);
 
-//        mInterstitialAd = new InterstitialAd(this);
-//        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-//        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-//        mAdView = findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
+        mInterstitialAd = new InterstitialAd(this);
+        String adOnBack = getString(R.string.banner_ad_backbutton);
+        mInterstitialAd.setAdUnitId(adOnBack);
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        AdLoader adLoader = new AdLoader.Builder(context, "ca-app-pub-3940256099942544/2247696110")
+                .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
+                    @Override
+                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
+                        // Show the ad.
+                    }
+                })
+                .withAdListener(new AdListener() {
+                    @Override
+                    public void onAdFailedToLoad(int errorCode) {
+                        // Handle the failure by logging, altering the UI, and so on.
+                    }
+                })
+                .withNativeAdOptions(new NativeAdOptions.Builder()
+                        // Methods in the NativeAdOptions.Builder class can be
+                        // used here to specify individual options settings.
+                        .build())
+                .build();
+
+
+
+
+
+
+
+
+
+
         final String answer = getIntent().getExtras().getString("answer");
         try {
             JSONObject obj = new JSONObject(answer);
@@ -51,7 +85,6 @@ public class OurAppsActivity extends AppCompatActivity {
         }catch (Throwable t) {
             Log.e("My App", "Could not parse malformed JSON: \"" + answer + "\"");
         }
-
         // 1 app
         ImageView imageView1 = (ImageView) findViewById(R.id.imageView1);
         Picasso.with(context).load(array2[1][3]).into(imageView1);
@@ -69,12 +102,9 @@ public class OurAppsActivity extends AppCompatActivity {
 
         TextView offerdesc1 = (TextView) findViewById(R.id.textViewDesc1);
         offerdesc1.setText(array2[1][0]);
-
-
         // 2app
         ImageView imageView2 = (ImageView) findViewById(R.id.imageView2);
         Picasso.with(context).load(array2[2][3]).into(imageView2);
-
         View view2 = (View) findViewById(R.id.view2);
         view2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,18 +113,10 @@ public class OurAppsActivity extends AppCompatActivity {
                 startActivity(browserIntent);
             }
         });
-
         TextView offertitle2 = (TextView) findViewById(R.id.textViewTitle2);
         offertitle2.setText(array2[2][2]);
-
         TextView offerdesc2 = (TextView) findViewById(R.id.textViewDesc2);
         offerdesc2.setText(array2[2][0]);
-
-
-
-
-
-
     }
     public void nextPage(View v){
         String ID = v.getContentDescription().toString();
@@ -108,22 +130,22 @@ public class OurAppsActivity extends AppCompatActivity {
         startActivity(infoIntent);
     }
     public void onClick(View view) {
-//        if (mInterstitialAd.isLoaded()) {
-//            mInterstitialAd.show();
-//        } else {
-//            Log.d("TAG", "The interstitial wasn't loaded yet.");
-//        }
-        StartAppAd.showAd(this);
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+        }
+//        StartAppAd.showAd(this);
         finish();
     }
     @Override
     public void onBackPressed() {
-//        if (mInterstitialAd.isLoaded()) {
-//            mInterstitialAd.show();
-//        } else {
-//            Log.d("TAG", "The interstitial wasn't loaded yet.");
-//        }
-        StartAppAd.onBackPressed(this);
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+        }
+//        StartAppAd.onBackPressed(this);
         super.onBackPressed();
         finish();
     }

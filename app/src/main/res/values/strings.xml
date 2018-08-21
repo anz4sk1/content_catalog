@@ -4,14 +4,14 @@
     <string name="json">https://manucure-3e06f.firebaseio.com/manicure.json</string>
     <string name="neednetwork">Требуется подключение к Интернету</string>
 
-    <string name="banner_ad_app">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ad_app">ca-app-pub-7164494629924185~8890675598</string>
     <string name="banner_ad_bottom">ca-app-pub-7164494629924185/8582310569</string>
     <string name="banner_ad_backbutton">ca-app-pub-7164494629924185/1750552178</string>
 
     <string name="banner_ad_test">ca-app-pub-3940256099942544/6300978111</string>
 
-
     <string name="yandexmetrika">3295f0cd-eb23-4e81-aaa4-b424fec010af</string>
+
 
     <string name="Ideas">Идеи</string>
     <string name="ideastext">Тысячи идей для вас</string>
@@ -29,17 +29,8 @@
     <string name="moreaboutapp">Подробнее</string>
 
     <string name="indevelopiment">Раздел находится в разработке</string>
-    <string name="devtext">описание ааааааааааааааа аа  ааааааааа  аааааааааааа описание ааааааааааааааа аа  ааааааааа  аааааааааааа описание ааааааааааааааа аа  ааааааааа  аааааааааааа</string>
+    <string name="devtext">Версия приложения 1.0, 2018 год. Обновления будут выходить раз в неделю. Мы будем рады вашим отзывам и комментариям.</string>
 
-
-    <string name="offer1title">Offer 1 Title</string>
-    <string name="offer1text">Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 TextOffer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 TextOffer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 TextOffer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text.Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 TextOffer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 TextOffer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 TextOffer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. Offer 1 Text. </string>
-
-    <string name="offer2title">Offer 2 Title</string>
-    <string name="offer2text">Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. Offer 2 Text. </string>
-
-    <string name="offer3title">Offer 3 Title</string>
-    <string name="offer3text">Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. Offer 3 Text. </string>
 
     <string name="contentdesc1">1</string>
     <string name="contentdesc2">2</string>
