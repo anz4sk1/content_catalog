@@ -23,7 +23,6 @@ public class OfferActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offer);
-
         mInterstitialAd = new InterstitialAd(this);
         String adOnBack = getString(R.string.banner_ad_backbutton);
         mInterstitialAd.setAdUnitId(adOnBack);
@@ -31,20 +30,14 @@ public class OfferActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
-
         String offer1avastring = getIntent().getExtras().getString("pict");
         ImageView offer1ava = (ImageView) findViewById(R.id.imageOfferAva);
         Picasso.with(context).load(offer1avastring).into(offer1ava);
-
         TextView offerTitleText = (TextView) findViewById(R.id.offerTitle);
         offerTitleText.setText(getIntent().getExtras().getString("name"));
-
         TextView offerDescText = (TextView) findViewById(R.id.textDescOffer);
         offerDescText.setText(getIntent().getExtras().getString("desc"));
-
     }
-
     public void onClick(View view) {
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
@@ -68,7 +61,6 @@ public class OfferActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
 //        mAdView.resume();
-
         super.onResume();
     }
 }

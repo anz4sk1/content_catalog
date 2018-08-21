@@ -21,7 +21,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
-
     private AdView mAdView;
     String answer;
     private InterstitialAd mInterstitialAd;
@@ -38,9 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
         new GetTask().execute();
-
         View view1 = (View) findViewById(R.id.view1);
         view1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         View view2 = (View) findViewById(R.id.view2);
         view2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         View view3 = (View) findViewById(R.id.view3);
         view3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         View view4 = (View) findViewById(R.id.view4);
         view4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private class GetTask extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... voids) {
@@ -110,16 +103,12 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-
-
     protected void onSaveInstanceState (Bundle outState){
         super.onSaveInstanceState(outState);
     }
     protected void onRestoreInstanceState (Bundle savedInstanceState){
         super.onRestoreInstanceState(savedInstanceState);
     }
-
     @Override
     public void onBackPressed() {
         if (mInterstitialAd.isLoaded()) {
@@ -131,10 +120,8 @@ public class MainActivity extends AppCompatActivity {
         super.onBackPressed();
         finish();
     }
-
     @Override
     protected void onResume() {
-
 //        mAdView.resume();
         super.onResume();
     }

@@ -11,7 +11,6 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.startapp.android.publish.adsCommon.StartAppAd;
 
 public class FavoritesActivity extends AppCompatActivity {
-
     private InterstitialAd mInterstitialAd;
     private AdView mAdView;
     @Override

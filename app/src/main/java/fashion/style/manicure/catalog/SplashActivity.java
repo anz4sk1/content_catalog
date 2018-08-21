@@ -14,19 +14,17 @@ import java.util.TimerTask;
 public class SplashActivity extends AppCompatActivity {
     Timer timer = new Timer();
     ConnectionDetector cd;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
-//        StartAppSDK.init(this, "207550666", true);
+//        String startAppId = getString(R.string.startAppId);
+//        StartAppSDK.init(this, startAppId, true);
         cd = new ConnectionDetector(this);
         if (cd.isConnected()) {
             Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-
         } else {
             Toast.makeText(SplashActivity.this, R.string.neednetwork, Toast.LENGTH_SHORT).show();
             timer.schedule(new TimerTask() {

@@ -48,7 +48,6 @@ public class AboutActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
 //        mAdView.resume();
-
         super.onResume();
     }
 }

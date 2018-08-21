@@ -10,13 +10,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.formats.NativeAdOptions;
-import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.squareup.picasso.Picasso;
 import com.startapp.android.publish.adsCommon.StartAppAd;
 
@@ -31,7 +27,6 @@ public class OurAppsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ourapps);
-
         mInterstitialAd = new InterstitialAd(this);
         String adOnBack = getString(R.string.banner_ad_backbutton);
         mInterstitialAd.setAdUnitId(adOnBack);
@@ -39,35 +34,6 @@ public class OurAppsActivity extends AppCompatActivity {
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
-        AdLoader adLoader = new AdLoader.Builder(context, "ca-app-pub-3940256099942544/2247696110")
-                .forUnifiedNativeAd(new UnifiedNativeAd.OnUnifiedNativeAdLoadedListener() {
-                    @Override
-                    public void onUnifiedNativeAdLoaded(UnifiedNativeAd unifiedNativeAd) {
-                        // Show the ad.
-                    }
-                })
-                .withAdListener(new AdListener() {
-                    @Override
-                    public void onAdFailedToLoad(int errorCode) {
-                        // Handle the failure by logging, altering the UI, and so on.
-                    }
-                })
-                .withNativeAdOptions(new NativeAdOptions.Builder()
-                        // Methods in the NativeAdOptions.Builder class can be
-                        // used here to specify individual options settings.
-                        .build())
-                .build();
-
-
-
-
-
-
-
-
-
-
         final String answer = getIntent().getExtras().getString("answer");
         try {
             JSONObject obj = new JSONObject(answer);
@@ -126,7 +92,6 @@ public class OurAppsActivity extends AppCompatActivity {
         infoIntent.putExtra("link", array2[i][1]);
         infoIntent.putExtra("name", array2[i][2]);
         infoIntent.putExtra("pict", array2[i][3]);
-
         startActivity(infoIntent);
     }
     public void onClick(View view) {

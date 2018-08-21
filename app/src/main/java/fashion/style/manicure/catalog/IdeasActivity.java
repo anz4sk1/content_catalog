@@ -30,7 +30,6 @@ Context context = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ideas);
         this.setTitle(R.string.Ideas);
-
         mInterstitialAd = new InterstitialAd(this);
         String adOnBack = getString(R.string.banner_ad_backbutton);
         mInterstitialAd.setAdUnitId(adOnBack);
@@ -54,16 +53,13 @@ Context context = this;
         }catch (Throwable t) {
             String ok;
         }
-
         for(int i = 1; i<11;i++){
             String ID = "imageView" + i;
             int resID = getResources().getIdentifier(ID, "id", getPackageName());
             ImageView IV = (ImageView) findViewById(resID);
             Picasso.with(context).load(array[i][1]).into(IV);
         }
-
     }
-
     public void nextPage(View v){
         String ID = v.getContentDescription().toString();
         int i = Integer.parseInt(ID);
@@ -71,7 +67,6 @@ Context context = this;
         infoIntent.putExtra("desc", array[i][0]);
         infoIntent.putExtra("pict", array[i][1]);
         infoIntent.putExtra("name", array[i][2]);
-
         startActivity(infoIntent);
     }
     public void onClick(View view) {
@@ -96,7 +91,6 @@ Context context = this;
     }
     @Override
     protected void onResume() {
-
 //        mAdView.resume();
         super.onResume();
     }
