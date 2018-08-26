@@ -2,6 +2,8 @@ package fashion.style.manicure.catalog;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +23,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
+
     private AdView mAdView;
     String answer;
     private InterstitialAd mInterstitialAd;
@@ -28,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String adMobApp = getString(R.string.banner_ad_app);
-        MobileAds.initialize(this, adMobApp);
-        mInterstitialAd = new InterstitialAd(this);
-        String adOnBack = getString(R.string.banner_ad_backbutton);
-        mInterstitialAd.setAdUnitId(adOnBack);
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+//        String adMobApp = getString(R.string.banner_ad_app);
+//        MobileAds.initialize(this, adMobApp);
+//        mInterstitialAd = new InterstitialAd(this);
+//        String adOnBack = getString(R.string.banner_ad_backbutton);
+//        mInterstitialAd.setAdUnitId(adOnBack);
+//        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+//        mAdView = findViewById(R.id.adView);
+//        AdRequest adRequest = new AdRequest.Builder().build();
+//        mAdView.loadAd(adRequest);
         new GetTask().execute();
         View view1 = (View) findViewById(R.id.view1);
         view1.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+                intent.putExtra("answer", answer);
                 startActivity(intent);
             }
         });

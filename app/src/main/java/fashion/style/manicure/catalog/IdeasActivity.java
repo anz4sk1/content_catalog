@@ -25,6 +25,7 @@ Context context = this;
     String[][] array = new String[50][3];
     private InterstitialAd mInterstitialAd;
     private AdView mAdView;
+    String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,11 +45,12 @@ Context context = this;
             JSONObject offersObj = new JSONObject(ideas);
             for (int x = 1; x < offersObj.length()+1; x++) {
                 String ID = "id" + x;
-                String id = offersObj.getString(ID);
+                id = offersObj.getString(ID);
                 JSONObject objID = new JSONObject(id);
                 array[x][0] = objID.getString("desc");
                 array[x][1] = objID.getString("pict");
                 array[x][2] = objID.getString("name");
+                Log.d("idgg22", ID);
             }
         }catch (Throwable t) {
             String ok;
@@ -67,6 +69,7 @@ Context context = this;
         infoIntent.putExtra("desc", array[i][0]);
         infoIntent.putExtra("pict", array[i][1]);
         infoIntent.putExtra("name", array[i][2]);
+        infoIntent.putExtra("id", ID);
         startActivity(infoIntent);
     }
     public void onClick(View view) {

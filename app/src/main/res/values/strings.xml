@@ -4,12 +4,12 @@
     <string name="json">https://manucure-3e06f.firebaseio.com/manicure.json</string>
     <string name="neednetwork">Требуется подключение к Интернету</string>
 
-    <string name="startAppId">207550666</string>
-    <string name="banner_ad_app">ca-app-pub-7164494629924185~8890675598</string>
-    <string name="banner_ad_bottom">ca-app-pub-7164494629924185/8582310569</string>
-    <string name="banner_ad_backbutton">ca-app-pub-7164494629924185/1750552178</string>
+    <string name="startAppId">2075506661</string>
+    <string name="banner_ad_app">ca-app-pub-7164494629924185~88906755981</string>
+    <string name="banner_ad_bottom">ca-app-pub-7164494629924185/85823105691</string>
+    <string name="banner_ad_backbutton">ca-app-pub-7164494629924185/17505521781</string>
 
-    <string name="yandexmetrika">3295f0cd-eb23-4e81-aaa4-b424fec010af</string>
+    <string name="yandexmetrika">3295f0cd-eb23-4e81-aaa4-b424fec010af1</string>
 
 
     <string name="Ideas">Идеи</string>
