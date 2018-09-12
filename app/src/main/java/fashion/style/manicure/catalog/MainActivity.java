@@ -17,13 +17,16 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.startapp.android.publish.adsCommon.StartAppAd;
 
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
-
+    String[][] array = new String[50][3];
+    String id;
     private AdView mAdView;
     String answer;
     private InterstitialAd mInterstitialAd;
@@ -40,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 //        mAdView = findViewById(R.id.adView);
 //        AdRequest adRequest = new AdRequest.Builder().build();
 //        mAdView.loadAd(adRequest);
+
+
         new GetTask().execute();
         View view1 = (View) findViewById(R.id.view1);
         view1.setOnClickListener(new View.OnClickListener() {
@@ -51,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         View view2 = (View) findViewById(R.id.view2);
-        view2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
-                intent.putExtra("answer", answer);
-                startActivity(intent);
-            }
-        });
+//        view2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+//                intent.putExtra("answer", answer);
+//                startActivity(intent);
+//            }
+//        });
         View view3 = (View) findViewById(R.id.view3);
         view3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
     private class GetTask extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... voids) {
@@ -103,10 +110,35 @@ public class MainActivity extends AppCompatActivity {
                 reader.close();
             }
             connection.disconnect();
+
+//            final String answer = getIntent().getExtras().getString("answer");
+            try {
+                JSONObject obj = new JSONObject(answer);
+                String ideas = obj.getString("ideas");
+                JSONObject offersObj = new JSONObject(ideas);
+                for (int x = 1; x < offersObj.length()+1; x++) {
+                    String ID = "id" + x;
+                    id = offersObj.getString(ID);
+                    JSONObject objID = new JSONObject(id);
+                    array[x][0] = objID.getString("desc");
+                    array[x][1] = objID.getString("pict");
+                    array[x][2] = objID.getString("name");
+                    Log.d("idgg22", ID);
+                }
+            }catch (Throwable t) {
+                String ok;
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+    public void onClick(View view) {
+        Intent intent = new Intent(MainActivity.this, FavoritesActivity.class);
+        intent.putExtra("answer", answer);
+        startActivity(intent);
+    }
+
     protected void onSaveInstanceState (Bundle outState){
         super.onSaveInstanceState(outState);
     }

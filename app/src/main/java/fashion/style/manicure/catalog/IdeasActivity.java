@@ -50,7 +50,7 @@ Context context = this;
                 array[x][0] = objID.getString("desc");
                 array[x][1] = objID.getString("pict");
                 array[x][2] = objID.getString("name");
-                Log.d("idgg22", ID);
+                Log.d("idgg22", array[1][2]);
             }
         }catch (Throwable t) {
             String ok;

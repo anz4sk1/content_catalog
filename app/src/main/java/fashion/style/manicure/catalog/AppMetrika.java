@@ -11,9 +11,9 @@ String metrika;
     @Override
     public void onCreate() {
         super.onCreate();
-        metrika = getString(R.string.yandexmetrika);
-        YandexMetricaConfig.Builder configBuilder = YandexMetricaConfig.newConfigBuilder(metrika);
-        YandexMetrica.activate(getApplicationContext(), configBuilder.build());
-        YandexMetrica.enableActivityAutoTracking(this);
+//        metrika = getString(R.string.yandexmetrika);
+//        YandexMetricaConfig.Builder configBuilder = YandexMetricaConfig.newConfigBuilder(metrika);
+//        YandexMetrica.activate(getApplicationContext(), configBuilder.build());
+//        YandexMetrica.enableActivityAutoTracking(this);
     }
 }
