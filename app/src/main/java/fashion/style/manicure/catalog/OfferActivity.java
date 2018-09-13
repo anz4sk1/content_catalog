@@ -21,7 +21,8 @@ import com.squareup.picasso.Picasso;
 import com.startapp.android.publish.adsCommon.StartAppAd;
 
 public class OfferActivity extends AppCompatActivity implements OnClickListener {
-
+    String saved1, saved2, saved3, saved4, saved5, saved6, saved7, saved8, saved9, saved10;
+    String currentOfferID;
     final String LOG_TAG = "myLogs";
 
     DBHelper dbHelper;
@@ -41,6 +42,7 @@ public class OfferActivity extends AppCompatActivity implements OnClickListener 
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
         String offer1avastring = getIntent().getExtras().getString("pict");
         ImageView offer1ava = (ImageView) findViewById(R.id.imageOfferAva);
         Picasso.with(context).load(offer1avastring).into(offer1ava);
@@ -51,13 +53,160 @@ public class OfferActivity extends AppCompatActivity implements OnClickListener 
 
         // создаем объект для создания и управления версиями БД
         dbHelper = new DBHelper(this);
-
+        currentOfferID = getIntent().getExtras().getString("id");
         btnAddID = (Button) findViewById(R.id.btnAdd);
         btnAddID.setOnClickListener(this);
-        btnAddID.setVisibility(View.VISIBLE);
+
         btnClear = (Button) findViewById(R.id.btnClear);
-        btnClear.setVisibility(View.GONE);
+
+
+        final SQLiteDatabase db = dbHelper.getWritableDatabase();
+        new Thread(new Runnable() {
+            public void run() {
+
+                Cursor c = db.query("mytable", null, null, null, null, null, null);
+
+                if (c.moveToPosition(0)) {
+
+                    int nameColIndex = c.getColumnIndex("name");
+                    saved1 = c.getString(nameColIndex);
+                    Log.d("position1", saved1);
+
+                    if (saved1.equals(currentOfferID)) {
+                        btnAddID.setVisibility(View.GONE);
+                        btnClear.setVisibility(View.VISIBLE);
+                    } else {
+                        if (c.moveToPosition(1)) {
+                            int nameColIndex2 = c.getColumnIndex("name");
+                            saved2 = c.getString(nameColIndex2);
+                            Log.d("position2", saved2);
+                            if (saved2.equals(currentOfferID)) {
+                                btnAddID.setVisibility(View.GONE);
+                                btnClear.setVisibility(View.VISIBLE);
+                            } else {
+                                if (c.moveToPosition(2)) {
+                                    int nameColIndex3 = c.getColumnIndex("name");
+                                    saved3 = c.getString(nameColIndex3);
+                                    Log.d("position3", saved3);
+                                    if (saved3.equals(currentOfferID)) {
+                                        btnAddID.setVisibility(View.GONE);
+                                        btnClear.setVisibility(View.VISIBLE);
+                                    } else {
+                                        if (c.moveToPosition(3)) {
+                                            int nameColIndex4 = c.getColumnIndex("name");
+                                            saved4 = c.getString(nameColIndex4);
+                                            Log.d("position3", saved4);
+                                            if (saved4.equals(currentOfferID)) {
+                                                btnAddID.setVisibility(View.GONE);
+                                                btnClear.setVisibility(View.VISIBLE);
+                                            } else {
+                                                if (c.moveToPosition(4)) {
+                                                    int nameColIndex5 = c.getColumnIndex("name");
+                                                    saved5 = c.getString(nameColIndex5);
+                                                    Log.d("position3", saved5);
+                                                    if (saved5.equals(currentOfferID)) {
+                                                        btnAddID.setVisibility(View.GONE);
+                                                        btnClear.setVisibility(View.VISIBLE);
+                                                    } else {
+                                                        if (c.moveToPosition(5)) {
+                                                            int nameColIndex6 = c.getColumnIndex("name");
+                                                            saved6 = c.getString(nameColIndex6);
+                                                            Log.d("position3", saved6);
+                                                            if (saved6.equals(currentOfferID)) {
+                                                                btnAddID.setVisibility(View.GONE);
+                                                                btnClear.setVisibility(View.VISIBLE);
+                                                            } else {
+                                                                if (c.moveToPosition(6)) {
+                                                                    int nameColIndex7 = c.getColumnIndex("name");
+                                                                    saved7 = c.getString(nameColIndex7);
+                                                                    Log.d("position3", saved7);
+                                                                    if (saved7.equals(currentOfferID)) {
+                                                                        btnAddID.setVisibility(View.GONE);
+                                                                        btnClear.setVisibility(View.VISIBLE);
+                                                                    } else {
+                                                                        if (c.moveToPosition(7)) {
+                                                                            int nameColIndex8 = c.getColumnIndex("name");
+                                                                            saved8 = c.getString(nameColIndex8);
+                                                                            Log.d("position3", saved8);
+                                                                            if (saved8.equals(currentOfferID)) {
+                                                                                btnAddID.setVisibility(View.GONE);
+                                                                                btnClear.setVisibility(View.VISIBLE);
+                                                                            } else {
+                                                                                if (c.moveToPosition(8)) {
+                                                                                    int nameColIndex9 = c.getColumnIndex("name");
+                                                                                    saved9 = c.getString(nameColIndex9);
+                                                                                    Log.d("position3", saved9);
+                                                                                    if (saved9.equals(currentOfferID)) {
+                                                                                        btnAddID.setVisibility(View.GONE);
+                                                                                        btnClear.setVisibility(View.VISIBLE);
+                                                                                    } else {
+                                                                                        if (c.moveToPosition(9)) {
+                                                                                            int nameColIndex10 = c.getColumnIndex("name");
+                                                                                            saved10 = c.getString(nameColIndex10);
+                                                                                            Log.d("position3", saved10);
+                                                                                            if (saved10.equals(currentOfferID)) {
+                                                                                                btnAddID.setVisibility(View.GONE);
+                                                                                                btnClear.setVisibility(View.VISIBLE);
+                                                                                            } else {
+                                                                                                btnClear.setVisibility(View.GONE);
+                                                                                                btnAddID.setVisibility(View.VISIBLE);
+                                                                                            }
+                                                                                        } else {
+                                                                                            btnClear.setVisibility(View.GONE);
+                                                                                            btnAddID.setVisibility(View.VISIBLE);
+                                                                                        }
+                                                                                    }
+                                                                                } else {
+                                                                                    btnClear.setVisibility(View.GONE);
+                                                                                    btnAddID.setVisibility(View.VISIBLE);
+                                                                                }
+                                                                            }
+                                                                        } else {
+                                                                            btnClear.setVisibility(View.GONE);
+                                                                            btnAddID.setVisibility(View.VISIBLE);
+                                                                        }
+
+                                                                    }
+                                                                } else {
+                                                                    btnClear.setVisibility(View.GONE);
+                                                                    btnAddID.setVisibility(View.VISIBLE);
+                                                                }
+                                                            }
+                                                        } else {
+                                                            btnClear.setVisibility(View.GONE);
+                                                            btnAddID.setVisibility(View.VISIBLE);
+                                                        }
+                                                    }
+                                                } else {
+                                                    btnClear.setVisibility(View.GONE);
+                                                    btnAddID.setVisibility(View.VISIBLE);
+                                                }
+                                            }
+                                        } else {
+                                            btnClear.setVisibility(View.GONE);
+                                            btnAddID.setVisibility(View.VISIBLE);
+                                        }
+                                    }
+                                } else {
+                                    btnClear.setVisibility(View.GONE);
+                                    btnAddID.setVisibility(View.VISIBLE);
+                                }
+                            }
+                        } else {
+                            btnClear.setVisibility(View.GONE);
+                            btnAddID.setVisibility(View.VISIBLE);
+                        }
+                    }
+                } else {
+                    btnClear.setVisibility(View.GONE);
+                    btnAddID.setVisibility(View.VISIBLE);
+                    c.close();
+                    dbHelper.close();
+                }
+            }
+        }).start();
     }
+
     public void onClick1(View view) {
 //        if (mInterstitialAd.isLoaded()) {
 //            mInterstitialAd.show();
@@ -65,6 +214,7 @@ public class OfferActivity extends AppCompatActivity implements OnClickListener 
 //            Log.d("TAG", "The interstitial wasn't loaded yet.");
 //        }
 //        StartAppAd.showAd(this);
+
         finish();
     }
     @Override
@@ -139,10 +289,16 @@ public class OfferActivity extends AppCompatActivity implements OnClickListener 
 //                c.close();
 //                break;
             case R.id.btnClear:
-                Log.d(LOG_TAG, "--- Clear mytable: ---");
-                // удаляем все записи
-                int clearCount = db.delete("mytable", "name", null);
-                Log.d(LOG_TAG, "deleted rows count = " + clearCount);
+//                Log.d(LOG_TAG, "--- Clear mytable: ---");
+//                // удаляем все записи
+//                int clearCount = db.delete("mytable", "name", null);
+//                Log.d(LOG_TAG, "deleted rows count = " + clearCount);
+
+
+
+
+                db.delete("mytable","name=?", new String[]{currentOfferID});
+
                 btnAddID.setVisibility(View.VISIBLE);
                 btnClear.setVisibility(View.GONE);
                 break;

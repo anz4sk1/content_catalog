@@ -470,5 +470,14 @@ public class FavoritesActivity extends AppCompatActivity {
         startActivity(infoIntent);
     }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+//        finish();
+//        startActivity(getIntent());
+    }
+    public void onClickUpdate(View view){
+        finish();
+        startActivity(getIntent());
+    }
 }
