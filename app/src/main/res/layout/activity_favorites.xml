@@ -11,7 +11,7 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         android:layout_gravity="top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,9 +74,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="508dp"
-        android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/adView"
+        android:layout_height="474dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
@@ -84,12 +82,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOffer1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/layoutOffer1">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view1"
@@ -147,9 +145,9 @@
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOffer2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/layoutOffer2">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view2"
@@ -210,9 +208,9 @@
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOffer3"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/layoutOffer3">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view3"
@@ -273,9 +271,9 @@
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOffer4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/layoutOffer4">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view4"
@@ -336,9 +334,9 @@
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOffer5"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/layoutOffer5">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view5"
@@ -399,9 +397,9 @@
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOffer6"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/layoutOffer6">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view6"
@@ -462,9 +460,9 @@
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOffer7"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/layoutOffer7">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view7"
@@ -525,9 +523,9 @@
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOffer8"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/layoutOffer8">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view8"
@@ -588,9 +586,9 @@
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOffer9"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/layoutOffer9">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view9"
@@ -651,9 +649,9 @@
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOffer10"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/layoutOffer10">
+                android:layout_height="match_parent">
 
                 <View
                     android:id="@+id/view10"
